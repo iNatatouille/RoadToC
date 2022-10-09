@@ -7,7 +7,15 @@ class Program {
         Random rnd = new Random();
         int randomNumber = rnd.Next(1,11);
 
-        string pointFile = "C:\\Users\\vaite\\OneDrive\\Documents\\VSCode\\ReposTest\\pointFile.txt";
+        string pointFile = "pointFile.txt";
+
+        if (File.Exists(pointFile) == false)
+        { 
+            //File.Create(pointFile);
+            File.WriteAllText(pointFile,"0");
+
+        }
+
         int currentPoints = Convert.ToInt32(File.ReadAllText(pointFile));
 
 
