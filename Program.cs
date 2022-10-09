@@ -7,7 +7,7 @@ class Program {
         Random rnd = new Random();
         int randomNumber = rnd.Next(1,11);
 
-        string pointFile = "pointFile.txt";
+        string pointFile = "C:\\Users\\vaite\\OneDrive\\Documents\\VSCode\\ReposTest\\pointFile.txt";
         int currentPoints = Convert.ToInt32(File.ReadAllText(pointFile));
 
 
@@ -25,6 +25,7 @@ class Program {
             currentPoints++;
             File.WriteAllText(pointFile,Convert.ToString(currentPoints));
             Console.WriteLine("Current points: "+currentPoints);
+            Console.ReadLine();
 
         }
     }
